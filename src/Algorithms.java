@@ -7,15 +7,13 @@ public class Algorithms {
         int sum= 0;
         int num = random.nextInt(100_000) + 11;
         System.out.println("Num original = " + num);
-        for (int i = 0; i < 6; i++) {
-            if (num > 10){
-                sum += num % 10;
-                num /= 10;
-            } else {
-                sum += num;
-                break;
-            }
+
+        while(num > 10){
+            sum += num % 10;
+            num /= 10;
         }
+        sum += num;
+
 
         System.out.println("Summa = " + sum);
     }
